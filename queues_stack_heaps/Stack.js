@@ -52,6 +52,16 @@ class Stack{
         return removedNode;
 
     }
+    
+    getMin(){
+    let elements = [], tracker = this.head;
+    while(tracker){
+        elements.push(tracker.val);
+        tracker = tracker.next;
+    }
+    return Math.min(...elements);
+};
+
 }
 
 
