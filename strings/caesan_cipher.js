@@ -37,3 +37,5 @@ function caesarCipher(s, k) {
 
   return finalString;
 }
+
+function groupStrings(inputArray) {}
