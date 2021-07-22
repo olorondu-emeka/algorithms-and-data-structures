@@ -44,9 +44,9 @@ function encrypt(message, shift) {
     } else if (letter.charCodeAt() >= 97 && letter.charCodeAt() <= 122) {
       if (longNumber.length) {
         shift += parseInt(longNumber);
-        if (shift < 0) shift = 123 + shift;
+        // if (shift < 0) shift = 123 + shift;
 
-        key = shift % 26;
+        key = shift > 0 ? shift % 26 : (123 + shift) % 26;
         longNumber = '';
       }
       finalString += shiftLetter(letter, key);
