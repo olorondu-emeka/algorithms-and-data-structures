@@ -35,17 +35,17 @@ function numberOfIslands(grid) {
         }
         dfs(neighbour, inputGrid);
         if (island > 0) {
-          // islands += 1;
-          // island = 0;
+          console.log('island', island);
+          islands += 1;
+          island = 0;
         }
       }
       // islands += 1;
-    });
+    }); // end forEach
   } // end dfs
 
   dfs('00', grid);
-  // console.log(visited);
-  return island;
+  return islands;
 }
 
 const grid1 = [
