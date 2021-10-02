@@ -1,3 +1,13 @@
+function indexes(n) {
+  // return an array of possible indexes
+  let allIndexes = [];
+  for (let i = 0; i < n; i++) {
+    allIndexes.push(i);
+  }
+
+  return allIndexes;
+}
+
 function is_valid_state(state, n) {
   /**
    * state represents a complete solution.
@@ -9,8 +19,15 @@ function is_valid_state(state, n) {
 function get_candidates(state, n) {
   /**
    * each candidate represents a possibly valid state outside the attacking zone of the queen
+   * i.e correct index position of queen
    *
    */
+  const indexArray = allIndexes(n);
+  if (!state.length) return indexArray;
+
+  // find the next position of the state to populate
+  let position = state.length;
+  let candidates = new Set(indexArray);
 }
 
 function search(state, solutions, n) {
