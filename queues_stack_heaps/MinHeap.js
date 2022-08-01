@@ -95,7 +95,7 @@ class MinHeap {
     return this.values.length;
   }
 
-  getvalues() {
+  getValues() {
     return this.values;
   }
 }
