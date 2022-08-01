@@ -51,7 +51,7 @@ class MinHeap {
     // rearrange heap (i.e bubble bubbleDown)
     this.bubbleDown();
 
-    return root;
+    return root.priority;
   }
 
   bubbleDown() {
