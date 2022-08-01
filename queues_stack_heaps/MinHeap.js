@@ -90,4 +90,12 @@ class MinHeap {
       }
     }
   }
+
+  getLength() {
+    return this.values.length;
+  }
+
+  getvalues() {
+    return this.values;
+  }
 }
